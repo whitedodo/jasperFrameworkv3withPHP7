@@ -1,0 +1,76 @@
+/*
+  Subject: JasperFramework with member join
+  FileName: style.css
+  Created Date: 2019-11-08
+  Author: Dodo (rabbit.white@daum.net)
+  Description:
+
+*/
+
+/* CSS ºÎºÐ  */
+a:link { color: #000; text-decoration: none;}
+a:visited { color: #000; text-decoration: none;}
+a:hover { color: #000; text-decoration: underline;}
+
+h3{
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+body{
+	padding: 0px 0px 0px 0px;
+	margin:10px 10px 10px 10px;
+}
+
+.tg_general  {
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#aaa;
+}
+.tg_general td{
+	font-family: 'NanumBarunGothic', sans-serif;
+	font-size:15px;
+	padding:5px 5px;
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+	word-break:normal;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-color:#aaa;
+	color:#333;
+	background-color:#fff;
+}
+.tg_general th{
+	font-family: 'NanumBarunGothic', sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	padding:5px 5px;
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+	word-break:normal;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-color:#aaa;
+	color:#fff;
+	background-color:#E6E6E6;
+}
+
+
+.button {
+    width:120px;
+	font-family: 'NanumBarunGothic', sans-serif;
+    font-weight:bold;
+    background-color: #EEE;
+    border: none;
+    border-radius:10px 0 10px 0;
+    color:#232323;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}

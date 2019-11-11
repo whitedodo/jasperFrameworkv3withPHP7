@@ -1,0 +1,73 @@
+/*
+  Subject: JasperFramework with Home
+  FileName: jasper_home.css
+  Created Date: 2019-10-12
+  Author: Dodo (rabbit.white@daum.net)
+  Description:
+
+*/
+
+/* CSS ºÎºÐ  */
+a:link { color: #000; text-decoration: none;}
+a:visited { color: #000; text-decoration: none;}
+a:hover { color: #000; text-decoration: underline;}
+
+h3{
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+body{
+	padding: 0px 0px 0px 0px;
+	margin: -10px 15px 15px 15px;
+	overflow-x:hidden;
+}
+
+.title{
+	font-family: 'NanumBarunGothic', sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    
+    padding-left: 20px;
+}
+
+table{
+	border-collapse:separte;
+	border-spacing:0px 0px;
+}
+
+.header_background{
+	background-color:#FFFFFF;
+}
+
+.menu{
+	list-style:none;
+	list-style-type:none;
+}
+
+.menu li{
+	list-style:none;
+	list-style-type:none;
+	
+	padding-top:5px;	
+}
+
+.menu .menu_txt{
+	padding-top:5px;
+	padding-left: 0px;
+	padding-bottom: 8px;
+	padding-right: 10px;
+	
+	border-bottom:1px #e2e2e2 solid;
+	
+	font-family: 'NanumBarunGothic', sans-serif;
+    font-size:14px;
+    
+}
+
+.notice_frame{
+	border:none;
+	position:relative;
+	margin:10px;  
+	height: 100vh;   
+	width: 100%;
+}

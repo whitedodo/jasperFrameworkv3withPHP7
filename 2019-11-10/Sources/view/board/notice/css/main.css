@@ -1,0 +1,116 @@
+
+h3{
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+a:link { color: #000; text-decoration: none;}
+a:visited { color: #000; text-decoration: none;}
+a:hover { color: #000; text-decoration: underline;}
+
+.tbl{
+	border-left:0px;
+	border-right:0px;
+	width:100%;
+	border-collapse:collapse;
+	border-spacing:10px 10px;
+}
+
+.tbl_header{
+	background-color:#f2f2f2;
+	height:30px;
+	font-size:15px;
+	font-family: 'NanumBarunGothic', sans-serif;
+	font-weight:bold;
+	text-align:center;
+	
+  	overflow:hidden;
+  	word-break:normal;
+	border-top:1px #e2e2e2 solid;
+	border-bottom:1px #e2e2e2 solid;
+}
+
+.tbl_rol{
+	background-color:#fff;
+	font-size:13px;
+	font-family: 'NanumBarunGothic', sans-serif;
+	text-align:left;
+	height: 30px;
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+	word-break:normal;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-color:#e2e2e2;
+}
+
+.tbl_col{
+	background-color:#fff;
+	font-size:13px;
+	font-family: 'NanumBarunGothic', sans-serif;
+	text-align:left;
+	overflow:hidden;
+  	word-break:normal;
+	height:30px;
+	border-style:solid;
+	border-width:0px;
+	overflow:hidden;
+	word-break:normal;
+	border:0px #fff none;
+}
+
+#pager {
+	list-style:none;
+	float:left;
+	display:inline;
+}
+
+#pager li {
+	float:left;
+}
+#pager li a {
+	float:left;
+	padding:10px;
+	margin-right:3px;
+	width:20px;
+	color:#000;
+	font:bold 16px 'NanumBarunGothic';
+	border:1px solid #D8D8D8;
+	text-align:center;
+	text-decoration:none;
+}
+
+#pager .active {
+	color:#fff;
+	border:1px solid #f40;
+	background-color:#f40;
+}
+
+#pager li a:hover, #pager li a:focus {
+	color:#fff;
+	border:1px solid #f40;
+	background-color:#f40;
+}
+
+#pager_font{
+	font-family: 'NanumBarunGothic', sans-serif;
+  	font-size:15px;
+}
+
+
+.button {
+    width:80px;
+	font-family: 'NanumBarunGothic', sans-serif;
+    font-weight:bold;
+    background-color: #EEE;
+    border: none;
+    border-radius:10px 0 10px 0;
+    color:#fff;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    cursor: pointer;
+}
