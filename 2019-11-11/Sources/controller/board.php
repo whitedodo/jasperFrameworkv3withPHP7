@@ -6,7 +6,7 @@
  Author: Dodo (rabbit.white@daum.net)
  Description:
  1. 2019-11-02 / Jasper / 댓글 기능 추가(글쓰기, 목록 기능 구현)
-  
+ 2. 2019-11-25 / Jasper / strlen에서 mb_strlen으로 변경
  */
 
 class Board{
@@ -300,15 +300,15 @@ class Board{
         
         #echo $passwd;
         
-        if (strlen($passwd) <= 8 && $passwd != -1 ){
+        if ( mb_strlen($passwd, "UTF-8") <= 8 && $passwd != -1 ){
             $passwdErr = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) == 0){
+        else if ( mb_strlen($passwd, "UTF-8") == 0){
             $passwdErr = '비밀번호 미입력(No password)';
             $state = 0;
         }
-        else if (strlen($passwd) > 8 &&
+        else if ( mb_strlen($passwd, "UTF-8") > 8 &&
             !$boardDB->isCheckPasswd($pageId, $passwd)){
                 $passwdErr = '비밀번호 불일치(Password mismatch)';
                 $state = 0;
@@ -434,11 +434,11 @@ class Board{
             $state = 1;
         }
         
-        if (strlen($passwd) <= 8 && $passwd !== -1 ){
+        if ( mb_strlen($passwd, "UTF-8") <= 8 && $passwd !== -1 ){
             $passwdErr = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) >= 0 && 
+        else if ( mb_strlen($passwd, "UTF-8") >= 0 && 
                  $passwd === -1){
             $passwdChkErr = '비밀번호 불일치(Password mismatch)';
             $state = 0;
@@ -595,11 +595,11 @@ class Board{
         
         #echo $passwd;
         
-        if (strlen($passwd) <= 8 && $passwd !== -1 ){
+        if ( mb_strlen($passwd, "UTF-8") <= 8 && $passwd !== -1 ){
             $passwdErr = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) >= 0 &&
+        else if ( mb_strlen($passwd, "UTF-8") >= 0 &&
             $passwd === -1){
                 $passwdChkErr = '비밀번호 불일치(Password mismatch)';
                 $state = 0;
@@ -1022,11 +1022,11 @@ class Board{
         
         #echo strlen($passwd);
         
-        if (strlen($passwd) <= 8 && $passwd !== -1 ){
+        if ( mb_strlen($passwd, "UTF-8") <= 8 && $passwd !== -1 ){
             $passwdErr = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) >= 0 &&
+        else if ( mb_strlen($passwd, "UTF-8") >= 0 &&
             $passwd === -1){
                 $passwdChkErr = '비밀번호 불일치(Password mismatch)';
                 $state = 0;
@@ -1122,15 +1122,15 @@ class Board{
         
         #echo strlen($passwd);
         
-        if (strlen($passwd) <= 8 && $passwd != -1 ){
+        if (mb_strlen($passwd, "UTF-8") <= 8 && $passwd != -1 ){
             $passwdErrMsg = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) == 0){
+        else if (mb_strlen($passwd, "UTF-8") == 0){
             $passwdErrMsg = '비밀번호 미입력(No password)';
             $state = 0;
         }
-        else if (strlen($passwd) > 8 &&
+        else if (mb_strlen($passwd, "UTF-8") > 8 &&
             !$boardDB->comment_isPassword($commentElem)){
                 $passwdErrMsg = '비밀번호 불일치(Password mismatch)';
                 $state = 0;
@@ -1226,15 +1226,15 @@ class Board{
         
         #echo strlen($passwd);
         
-        if (strlen($passwd) <= 8 && $passwd != -1 ){
+        if (mb_strlen($passwd, "UTF-8") <= 8 && $passwd != -1 ){
             $passwdErrMsg = '비밀번호 8자리 이하(8 digits or less)';
             $state = 0;
         }
-        else if (strlen($passwd) == 0){
+        else if (mb_strlen($passwd, "UTF-8") == 0){
             $passwdErrMsg = '비밀번호 미입력(No password)';
             $state = 0;
         }
-        else if (strlen($passwd) > 8 &&
+        else if (mb_strlen($passwd, "UTF-8") > 8 &&
             !$boardDB->comment_isPassword($commentElem)){
                 $passwdErrMsg = '비밀번호 불일치(Password mismatch)';
                 $state = 0;
