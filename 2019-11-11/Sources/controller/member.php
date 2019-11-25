@@ -1,4 +1,13 @@
 <?php
+/*
+     Subject: JasperFramework Version 3
+     FileName: member.php
+     Created Date: 2019-10-30
+     Author: Dodo (rabbit.white@daum.net)
+     Description:
+     1. 2019-11-25 / Jasper / strlen에서 mb_strlen으로 변경
+ */
+
 
 class Member{
     
@@ -184,7 +193,7 @@ class Member{
             $passwdErr = '비밀번호 불일치(Password mismatch)';
             $state--;
         }
-        else if ( strlen($memberElem->getPasswd()) <= 8){
+        else if ( mb_strlen($memberElem->getPasswd(), "UTF-8") <= 8){
             $passwdErr = '비밀번호 8자리 이상(8-digit password or more)';
             $state--;
         }else{
@@ -368,13 +377,15 @@ class Member{
             $passwdErr = '비밀번호 불일치(Password mismatch)';
             $state--;
         }
-        else if ( strlen($memberElem->getPasswd()) <= 8){
+        else if ( mb_strlen($memberElem->getPasswd(), "UTF-8") <= 8){
             $passwdErr = '비밀번호 8자리 이상(8-digit password or more)';
             $state--;
         }else{
             $passwdErr = '';
             $state++;
         }
+        
+        //echo $memberElem->getPasswd();
         
         // 이름 오류
         if (strlen($memberElem->getName()) === 0 ){
