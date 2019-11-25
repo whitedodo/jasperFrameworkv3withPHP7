@@ -6,7 +6,7 @@
  * Created Date: 2019-11-08
  * Author: Dodo (rabbit.white@daum.net)
  * Description:
- * 
+ * 2019-11-25 / 비밀번호 버그 개선(한글, 영문 미인식)
 */
 
 ### 회원 OPENAPI 기본 정보
@@ -39,23 +39,25 @@ $MEMBER_WITHDRAWAL_OK = $_POST["withdrawal_ok"];
 #echo "호[" . $MEMBER_JOIN_OK . "] <br>";
 
 ### 회원 - 비밀번호
-if ( strcmp( $MEMBER_BASE_PASSWD1, $MEMBER_BASE_PASSWD2) === 0 && 
+if ( $MEMBER_BASE_PASSWD1 == $MEMBER_BASE_PASSWD2 && 
     ( $MEMBER_BASE_PASSWD1 != 0 && $MEMBER_BASE_PASSWD2 != 0) ){
         
     #echo "참1";
     $MEMBER_BASE_PASSWD = $MEMBER_BASE_PASSWD1;
     
-}else if ( strcmp( $MEMBER_BASE_PASSWD1, $MEMBER_BASE_PASSWD2 ) === -1 ){
+}else if ( $MEMBER_BASE_PASSWD1 != $MEMBER_BASE_PASSWD2 ){
     #echo "참2";
     
     $MEMBER_BASE_PASSWD = -1;
-}else if ( $MEMBER_LOGIN_OK === 1){
+}else if ( $MEMBER_LOGIN_OK == 1){
     #echo "참3";
 }
 else{
     #echo "참4";
+    $MEMBER_BASE_PASSWD = $MEMBER_BASE_PASSWD1;
 }
 
+//echo $MEMBER_BASE_PASSWD . "/";
 
 ### 회원 모델 입력
 
